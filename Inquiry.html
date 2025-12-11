@@ -1,3 +1,92 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>旅館 橘お問い合わせ</title>
+<link rel="icon" href="ryokantachibananewsitelogo.png" type="image/png">
+<style>
+body {
+  font-family: "Noto Sans JP", sans-serif;
+  font-weight: 600;
+  background-color: #F3F0EC;
+  margin: 0;
+  padding: 0;
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+form {
+  background-color: #fff;
+  width: 90%;
+  max-width: 420px;
+  padding: 30px 25px;
+  border-radius: 20px;
+  box-shadow: 0 5px 15px rgba(0,0,0,0.15);
+  box-sizing: border-box;
+}
+h2 {
+  text-align: center;
+  color: #333;
+  margin-bottom: 20px;
+  font-size: 1.4em;
+}
+label {
+  display: block;
+  margin-top: 15px;
+  color: #333;
+  font-size: 0.95em;
+}
+label .required {
+  color: red;
+  margin-left: 3px;
+}
+input, textarea {
+  width: 100%;
+  padding: 10px;
+  margin-top: 8px;
+  border: 1.5px solid #ccc;
+  border-radius: 8px;
+  font-family: inherit;
+  font-weight: 500;
+  font-size: 1em;
+  box-sizing: border-box;
+}
+textarea { resize: vertical; }
+button {
+  width: 100%;
+  margin-top: 20px;
+  padding: 14px;
+  background-color: #F3F0EC;
+  color: #333;
+  font-size: 1em;
+  font-weight: 700;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: 0.3s;
+}
+button:hover { background-color: #e6e3de; }
+
+.notice {
+  margin-top: 20px;
+  font-size: 0.9em;
+  color: #333;
+  line-height: 1.5;
+  background-color: #fdfbf7;
+  padding: 12px;
+  border-radius: 8px;
+}
+@media (max-width: 480px) {
+  body { padding: 20px; align-items: flex-start; }
+  form { margin-top: 40px; padding: 25px 20px; border-radius: 15px; }
+  h2 { font-size: 1.2em; }
+}
+</style>
+</head>
+<body>
+
 <form action="https://formsubmit.co/info@tachibana-urakawa.jp" method="POST">
   <h2>旅館 橘お問い合わせ</h2>
   
@@ -10,12 +99,11 @@
   <label>お問い合わせ内容<span class="required">＊必須</span></label>
   <textarea name="message" rows="5" required></textarea>
 
-  <!-- メール件名を指定 -->
+  <!-- メール件名 -->
   <input type="hidden" name="_subject" value="[!]お問い合わせ">
 
-  <!-- メール本文のテンプレート（ご希望のフォーマット） -->
+  <!-- メール本文テンプレート -->
   <input type="hidden" name="_template" value="table">
-  <input type="hidden" name="_email.template" value="custom">
   <textarea name="_email.body" style="display:none;">
 お問い合わせ内容
 
@@ -30,10 +118,8 @@
 https://tachibana-urakawa.com/Inquiry.html
   </textarea>
 
-  <!-- サンクスページにリダイレクト -->
+  <!-- サンクスページへ -->
   <input type="hidden" name="_next" value="https://haruomilabo.net/haruomilabo_inquiry/thank-you.html">
-
-  <!-- キャプチャ無効 -->
   <input type="hidden" name="_captcha" value="false">
 
   <button type="submit">送信する</button>
@@ -44,3 +130,6 @@ https://tachibana-urakawa.com/Inquiry.html
     お問い合わせの返信には少しお時間がかかる場合がございますが、ご了承ください。
   </div>
 </form>
+
+</body>
+</html>
