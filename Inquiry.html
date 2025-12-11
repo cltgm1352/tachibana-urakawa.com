@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>旅館 橘お問い合わせ</title>
+<link rel="icon" href="ryokantachibananewsitelogo.png" type="image/png">
+<style>
+body {
+  font-family: "Noto Sans JP", sans-serif;
+  font-weight: 600;
+  background-color: #38b6ff;
+  margin: 0;
+  padding: 0;
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+form {
+  background-color: #fff;
+  width: 90%;
+  max-width: 420px;
+  padding: 30px 25px;
+  border-radius: 20px;
+  box-shadow: 0 5px 15px rgba(0,0,0,0.15);
+  box-sizing: border-box;
+}
+h2 {
+  text-align: center;
+  color: #333;
+  margin-bottom: 20px;
+  font-size: 1.4em;
+}
+label {
+  display: block;
+  margin-top: 15px;
+  color: #333;
+  font-size: 0.95em;
+}
+label .required {
+  color: red;
+  margin-left: 3px;
+}
+input, textarea {
+  width: 100%;
+  padding: 10px;
+  margin-top: 8px;
+  border: 1.5px solid #ccc;
+  border-radius: 8px;
+  font-family: inherit;
+  font-weight: 500;
+  font-size: 1em;
+  box-sizing: border-box;
+}
+textarea {
+  resize: vertical;
+}
+button {
+  width: 100%;
+  margin-top: 20px;
+  padding: 14px;
+  background-color: #38b6ff;
+  color: white;
+  font-size: 1em;
+  font-weight: 700;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: 0.3s;
+}
+button:hover {
+  background-color: #1e90ff;
+}
+.privacy {
+  display: flex;
+  align-items: center;
+  margin-top: 20px;
+  font-size: 0.9em;
+  color: #333;
+  line-height: 1.5;
+}
+.privacy input[type="checkbox"] {
+  appearance: none;
+  -webkit-appearance: none;
+  width: 22px;
+  height: 22px;
+  margin-right: 10px;
+  border: 2px solid #38b6ff;
+  border-radius: 6px;
+  position: relative;
+  cursor: pointer;
+  outline: none;
+  flex-shrink: 0;
+}
+.privacy input[type="checkbox"]::after {
+  content: "";
+  position: absolute;
+  width: 8px;
+  height: 14px;
+  border-right: 3px solid white;
+  border-bottom: 3px solid white;
+  top: 2px;
+  left: 6px;
+  transform: rotate(45deg);
+  opacity: 0;
+  transition: 0.2s;
+}
+.privacy input[type="checkbox"]:checked {
+  background-color: #38b6ff;
+}
+.privacy input[type="checkbox"]:checked::after {
+  opacity: 1;
+}
+.privacy a {
+  color: #38b6ff;
+  text-decoration: none;
+  font-weight: 700;
+}
+.privacy a:hover {
+  text-decoration: underline;
+}
+.notice {
+  margin-top: 20px;
+  font-size: 0.9em;
+  color: #333;
+  line-height: 1.5;
+  background-color: #e0f4ff;
+  padding: 12px;
+  border-radius: 8px;
+  word-break: break-word;
+}
+@media (max-width: 480px) {
+  body { padding: 20px; align-items: flex-start; }
+  form { margin-top: 40px; padding: 25px 20px; border-radius: 15px; }
+  h2 { font-size: 1.2em; }
+  input, textarea, button { font-size: 0.95em; }
+  .privacy { align-items: flex-start; font-size: 0.85em; }
+  .privacy input[type="checkbox"] { width: 20px; height: 20px; margin-top: 2px; }
+}
+</style>
+</head>
+<body>
+
+<form action="https://formsubmit.co/info@tachibana-urakawa.jp" method="POST">
+  <h2>旅館 橘お問い合わせ</h2>
+
+  <label>お名前<span class="required">＊必須</span></label>
+  <input type="text" name="name" required>
+
+  <label>メールアドレス<span class="required">＊必須</span></label>
+  <input type="email" name="email" required>
+
+  <label>お問い合わせ内容<span class="required">＊必須</span></label>
+  <textarea name="message" rows="5" required></textarea>
+
+  <!-- thank-you.html にリダイレクト -->
+  <input type="hidden" name="_next" value="https://haruomilabo.net/haruomilabo_inquiry/thank-you.html">
+  
+  <!-- FormSubmit 初回確認用（必ず入れる） -->
+  <input type="hidden" name="_captcha" value="false">
+
+  <button type="submit">送信する</button>
+
+  <div class="notice">
+    ご記入いただいたメールアドレスに <strong>info@tachibana-urakawa.jp</strong> から<br>
+    返信が送信されます。<br>
+    お問い合わせの返信には少しお時間がかかる場合がございますが、ご了承ください。
+  </div>
+</form>
+
+</body>
+</html>
