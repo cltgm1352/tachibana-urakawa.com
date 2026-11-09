@@ -330,6 +330,35 @@
       transform: scale(1.04);
     }
 
+    /* ─── SNS ─── */
+    .sns {
+      background: #262626;
+      padding: 80px 6%;
+      text-align: center;
+      border-top: 1px solid rgba(255, 255, 255, 0.08);
+    }
+
+    .sns-link {
+      display: inline-flex;
+      width: 64px;
+      height: 64px;
+      align-items: center;
+      justify-content: center;
+      border-radius: 50%;
+      background: #ffffff;
+      transition: transform 0.2s ease;
+    }
+
+    .sns-link:hover {
+      transform: scale(1.04);
+    }
+
+    .sns-link img {
+      display: block;
+      width: 32px;
+      height: 32px;
+    }
+
     footer {
       background: #262626;
       padding: 28px 6%;
@@ -538,12 +567,9 @@
 
   <div class="site-title">TACHIBANA</div>
   <div class="tagline">
-  <span style="color: #ff4d43; font-size: 1.5em; display: block; margin-bottom: 5px;">Opening in April 2027</span>
-  A Stay That Gives Back.
-</div>
-
-
-
+    <span style="color: #ff4d43; font-size: 1.5em; display: block; margin-bottom: 5px;">Opening in April 2027</span>
+    A Stay That Gives Back.
+  </div>
 
   <div class="video-bg">
     <video autoplay muted loop playsinline preload="auto">
@@ -599,7 +625,7 @@
       <h2 class="section-title">Access</h2>
       <div class="map-container">
         <iframe 
-          src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d4395.201655203754!2d137.76282627604763!3d35.06062862686402!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x601b15672391fe09%3A0x12ec99034eb31553!2z44CSNDMxLTM5MDYg6Z2Z5bKh55yM5rWc5p2-5biC5aSp56uc5Yy65L2Q5LmF6ZaT55S65rWm5bed77yT77yU77yZ77yZ!5e1!3m2!1sja!2sjp!4v1767708895561!5m2!1sja!2sjp" 
+          src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d4395.201655203754!2d137.76282627604763!3d35.06062862686402!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x601b15672391fe09%3A0x12ec99034eb31553!2z44CSNDMxLTM5MDYg6Z2Z5bKh55yM5rWc5p2-5biC5aSp56uc5Yy65L2Q5LmA6ZaT55S65rWm5bed77yT77yU77yZ77yZ!5e1!3m2!1sja!2sjp!4v1767708895561!5m2!1sja!2sjp" 
           width="100%" 
           height="500" 
           style="border:0;" 
@@ -623,6 +649,20 @@
         We didn't create a place to stay.<br>
         We shaped a moment to remember.
       </p>
+    </section>
+
+    <!-- SNS -->
+    <section class="sns">
+      <h2 class="section-title">SNS</h2>
+      <a
+        class="sns-link"
+        href="https://www.instagram.com/tachibana.urakawa/"
+        target="_blank"
+        rel="noopener noreferrer"
+        aria-label="Instagram（新しいタブで開く）"
+      >
+        <img src="img/home/Instagram_Glyph_Black.svg" alt="Instagram">
+      </a>
     </section>
 
     <!-- Contact -->
